@@ -1,0 +1,34 @@
+.video-cards {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.video-player-card {
+	margin: 4px;
+}
+
+.notifications {
+	position: fixed;
+	bottom: 7rem;
+	left: 2rem;
+}
+
+.messages {
+	position: fixed;
+	right: 0rem;
+	top: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.controlbar {
+	display: flex;
+	width: 100%;
+	bottom: 0;
+	justify-content: center;
+	align-items: center;
+	height: 5rem;
+	position: fixed;
+}

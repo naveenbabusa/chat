@@ -1,0 +1,11 @@
+.thank-you-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.thank-you-text {
+	color: aliceblue;
+}

@@ -1,0 +1,82 @@
+#player-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	z-index: 999;
+}
+
+.player {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	border-radius: 25px;
+	opacity: 1;
+	box-shadow: 0 2px 4px 0px #f8f9fa14, 0px 1px 5px 0px #f8f9fa24;
+}
+
+.player-name {
+	top: 1rem;
+	left: 1rem;
+	position: absolute;
+
+	max-width: 130px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	opacity: 0.5;
+	padding: 5px 10px;
+	border-radius: 25px;
+	background-color: white;
+
+	font-weight: bolder;
+}
+
+/* .player-controls {
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+} */
+
+/* .video-container:hover .player-controls {
+	opacity: 1;
+}
+
+.video-container:hover .player {
+	opacity: 0.4;
+} */
+
+.audio-visualizer {
+	width: 22px;
+	height: 25px;
+	position: absolute;
+	bottom: 2rem;
+	left: 1.5rem;
+}
+
+.audio-meter-panel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: inherit;
+
+	background-color: #1b262c;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.audio-meter {
+	width: 5px;
+	border-radius: 2.5px;
+	max-height: 25px;
+	margin: 0px 1px;
+	background-color: darkgreen;
+	transition-property: height;
+	transition-duration: 0.1s;
+}
