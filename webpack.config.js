@@ -1,7 +1,9 @@
 const path = require("path");
 const BUILD_DIR = path.resolve(__dirname, "./public/build");
 const APP_DIR = path.resolve(__dirname, "./client");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+
+const mode = process.env.NODE_ENV || "development";
 
 module.exports = {
 	entry: {
@@ -36,8 +38,17 @@ module.exports = {
 			},
 		],
 	},
-	mode: "development",
+	mode,
 	optimization: {
-		minimizer: [new UglifyJsPlugin()],
+		minimize: true,
+		minimizer: [
+			new TerserPlugin({
+				parallel: true,
+				terserOptions: {
+					ecma: 6,
+				},
+			}),
+		],
 	},
+	devtool: mode === "development" ? "inline-source-map" : false,
 };
