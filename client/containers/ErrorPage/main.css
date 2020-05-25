@@ -1,0 +1,13 @@
+.error-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0 2%;
+}
+
+.error-text {
+	color: aliceblue;
+	text-align: center;
+}

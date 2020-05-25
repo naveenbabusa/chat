@@ -8,6 +8,16 @@ const io = require("socket.io")(server);
 
 io.on("connection", (socket) => CONNECTION(socket, io));
 
+app.use((req, res, next) => {
+	if (
+		process.env.NODE_ENV === "production" &&
+		req.headers["x-forwarded-proto"] !== "https"
+	) {
+		return res.redirect("https://" + req.headers.host + req.url);
+	}
+	return next();
+});
+
 app.use(express.static(__dirname + "/public"));
 
 app.get("*", (req, res) => {

@@ -15,7 +15,7 @@ import { getUserMediaSettings } from "../../helpers";
 import io from "socket.io-client";
 
 export default function Home(props) {
-	const [socket, setSocket] = useState({ id: "Fetching..." });
+	const [socket, setSocket] = useState(null);
 	const [credentials, setCredentials] = useState(null);
 
 	const [currentStream, setCurrentStream] = useState();
@@ -30,6 +30,9 @@ export default function Home(props) {
 				]);
 			})
 			.catch((err) => {
+				if (err.message.includes("Permission denied")) {
+					props.history.push("/permission-denied");
+				}
 				console.error(err);
 			});
 	}, []);
