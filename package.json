@@ -15,7 +15,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"bootstrap": "^4.4.1",
-		"express": "^4.17.1",
+		"express": "^4.17.3",
 		"file-loader": "^6.0.0",
 		"path-to-regexp": "^6.1.0",
 		"react": "^16.13.1",
